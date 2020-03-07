@@ -1,0 +1,16 @@
+on: [push, pull_request]
+name: Build
+jobs:
+  build:
+    strategy:
+      matrix:
+        compiler: [clang]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Get submodule
+      run: git submodule update --init --recursive 
+      shell: bash
+    - name: Build
+      run: ./build.sh
+      shell: bash

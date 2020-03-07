@@ -1,5 +1,7 @@
 # ST7735 library for Raspberry PI
 
+![Build](https://github.com/bertrandmartel/st7735-raspberry/workflows/Build/badge.svg) [![License](http://img.shields.io/:license-mit-blue.svg)](LICENSE.md)
+
 A port of [ST7735 Arduino library](https://github.com/adafruit/Adafruit-ST7735-Library) and [ST7735 GFX Arduino library](https://github.com/adafruit/Adafruit-GFX-Library) to Raspberry PI using [wiringPi](https://github.com/WiringPi). The idea was to be able to control ST7735 TFT LCD on Raspberry PI using C++ instead of the regular Python libraries.
 
 Supported screens are :
