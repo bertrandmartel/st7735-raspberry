@@ -211,6 +211,11 @@ void Adafruit_ST7735::fillScreen(uint16_t color)
 	fillRect(0, 0,  _width, _height, color);
 }
 
+void Adafruit_ST7735::drawString(const char *c)
+{
+	drawString(c, textcolor, 1);
+}
+
 void Adafruit_ST7735::drawString(const char *c, uint16_t color, uint8_t size)
 {
 	if (color != textcolor){
@@ -219,6 +224,11 @@ void Adafruit_ST7735::drawString(const char *c, uint16_t color, uint8_t size)
 	for (uint16_t i = 0; i < strlen(c); i++){
 		write(c[i]);
 	}
+}
+
+void Adafruit_ST7735::drawChar(char c)
+{
+	write(c);
 }
 
 void Adafruit_ST7735::write(uint8_t c) {
@@ -373,4 +383,8 @@ void Adafruit_ST7735::setCursor(int16_t x, int16_t y) {
 
 void Adafruit_ST7735::setTextBackground(uint16_t bg) {
 	textbgcolor = bg;
+}
+
+void Adafruit_ST7735::setTextColor(uint16_t color) {
+	textcolor = color;
 }

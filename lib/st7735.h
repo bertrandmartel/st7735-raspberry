@@ -414,6 +414,10 @@ public:
 
 	void drawString(const char *c, uint16_t color, uint8_t size);
 
+	void drawString(const char *c);
+
+	void drawChar(char c);
+
 	void writePixel(uint16_t x, uint16_t y, uint16_t color);
 
 	void fillRect(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color);
@@ -427,6 +431,8 @@ public:
 	void draw_bitmap_st7735_stream(const uint8_t *image, unsigned long length);
 
 	void setCursor(int16_t x, int16_t y);
+	
+	void setTextColor(uint16_t color);
 
 private:
 	void write(uint8_t c);
